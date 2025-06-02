@@ -1,30 +1,57 @@
 const mainBtn = document.querySelector('.scroll-up-btn-2');
 
 function handleMobileModal() {
+    console.log('handleMobileModal вызвана');
   const modal = document.getElementById('mobileModal');
   const closeBtn = document.querySelector('.close-modal');
   
-  // Проверяем, является ли устройство мобильным
-  if (window.innerWidth <= 768) {
-    // Проверяем, не было ли уже показано предупреждение
-    if (!localStorage.getItem('modalShown')) {
+  // Проверяем, существуют ли необходимые элементы
+  if (!modal || !closeBtn) {
+    console.error('Не найдены необходимые элементы для модального окна');
+    return;
+  }
+  
+  console.log('Элементы модального окна найдены');
+  
+  function showModal() {
+    console.log('Ширина экрана:', window.innerWidth);
+    if (window.innerWidth <= 768) {
+      console.log('Показываем модальное окно');
       modal.style.display = 'block';
-      localStorage.setItem('modalShown', 'true');
     }
+  }
+  if (window.innerWidth <= 768) {
+    showModal();
   }
 
   // Закрытие модального окна при клике на крестик
   closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+    localStorage.setItem('modalShown', 'true');
   });
 
   // Закрытие модального окна при клике вне его области
   window.addEventListener('click', (event) => {
     if (event.target === modal) {
       modal.style.display = 'none';
+       localStorage.setItem('modalShown', 'true');
+    }
+  });
+
+  // Проверяем размер экрана при изменении размера окна
+  window.addEventListener('resize', () => {
+    console.log('Изменение размера окна');
+    if (window.innerWidth <= 768 && !localStorage.getItem('modalShown')) {
+      showModal();
     }
   });
 }
+// Вызываем функцию при загрузке DOM
+document.addEventListener('DOMContentLoaded', handleMobileModal);
+
+// Вызываем функцию при полной загрузке страницы
+window.addEventListener('load', handleMobileModal);
+
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
   
