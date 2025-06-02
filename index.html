@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Игра 'Кто я?' с правилами русского языка">
+    <meta name="theme-color" content="#492F04">
+    <title>Кто я? - С правилами русского языка</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+  </head>
+  <body>
+    <button class="scroll-up-btn-2 hidden scroll-to-top">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+      <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+    </svg>
+  </button>
+    <section id="home-sector" class="section">
+      <h1 id="scroll-up-btn-1">Кто я?</h1>
+      <p class="name-site">С правилами русского языка</p>
+    </section>
+    <section id="rules-sector" class="section">
+      <div class="rules-container">
+        <div class="rules-left-column">
+          <h2>Что это за игра?</h2>
+          <p class="rules-sector-paragraph">«Кто я?» — это увлекательная игра для компании, в которой игроки пытаются угадать, кем или чем они являются, задавая вопросы с ответами «да» или «нет».</p>
+          <p class="rules-sector-paragraph">Правила игры:</p>
+          <p class="rules-sector-paragraph"><strong>1. Подготовка:</strong> Каждый игрок получает карточку с именем персонажа, животного или предмета. Важно, чтобы он не видел свою карточку.</p>
+          <p class="rules-sector-paragraph"><strong>2. Игровой процесс:</strong> Игроки по очереди задают вопросы другим участникам, чтобы выяснить, кем они являются. Вопросы должны допускать ответ только «да» или «нет».</p>
+          <p class="rules-sector-paragraph"><strong>3. Завершение игры:</strong> Игра продолжается, пока все игроки не угадают свои роли. Побеждает тот, кто сделает это первым.</p>
+          <p class="rules-sector-paragraph">Игра особенно увлекательна в компании друзей.</p>
+        </div>
+        <div class="rules-right-column">
+          <p class="card-title">Пример карточки:</p>
+          <div class="card_main"> 
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="dop-files/Карточки/Карточка_Main.png" alt="Передняя сторона карточки">
+              </div>
+              <div class="card-back">
+                <img src="dop-files/Карточки/Карточка_Back.png" alt="Задняя сторона карточки">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="explanation" class="section">
+    <h2>В чем суть нашего проекта?</h2>
+    <div class="content-wrapper">
+      <div class="text-container">
+        <p class="explanation-sector-paragraph">Мы создали вариацию игры «Кто я?», использовав все доступные нам в проекте правила русского языка. Одно «н» и две «нн» в суффиксах прилагательных и причастиях; анонимы, синонимы, антонимы; прямая речь; знаки препинания в сложносочинённых, сложноподчинённых и бессоюзных предложениях и т.д. Мы сделали это для того, чтобы дать учителям и ученикам альтернативу традиционным методам обучения. Куда интереснее узнать что-то новое во время игры, чем зубрить правила, сидя за партой. Мы собрали правила из всех блоков, доступных нам, чтобы люди могли увлекательно изучать русский язык, а также оставили исходники всех карточек, которые может скачать любой желающий для своего удобства.</p>
+      </div>
+      <div class="button-container">
+        <button class="button">
+          <span class="button-content">Скачать</span>
+        </button>
+      </div>
+    </div>
+    </section>
+    <section id="The_creation_process" class="section">
+      <h2>Как мы создали этот проект?</h2>
+      <div class="content-wrapper">
+        <div class="text-container">
+          <p class="explanation-sector-paragraph">Мы, взяв информацию о правилах с сайта <a href="https://gramota.ru">gramota.ru</a>, укомплектовали её в удобный для игры формат, разместили на <a href="spravochnik.html">сайте</a> с поиском, а также поместили более укороченные правила на обратной стороне каждой карточки для удобства игры. Мы собрали правила из всех доступных нам блоков, чтобы люди могли увлекательно изучать русский язык, а также оставили исходники всех карточек, которые любой желающий может скачать для своего удобства.</p>
+        </div>
+        <div class="button-container">
+          <button class="button"><a class="button-content" href="spravochnik.html">Справочник</a></button>
+        </div>
+        <div class="picture_container">
+          <div class="top_cards">
+            <div class="card_rect"></div>
+            <div class="card_rect"></div>
+            <div class="card_rect"></div>
+          </div>
+          <div class="bottom_card"></div>
+        </div>
+      </div>
+    </section>
+    <section id="how-to-make-cards" class="section">
+      <h2 id="howto">Как сделать карточки?</h2>
+      <ol class="text-htm-cont">
+        <li>Скачайте архив с карточками выше.</li>
+        <li>Распечатайте карточки дома или обратитесь в ближайший копицентр.</li>
+        <li>Далее есть два варианта: либо вы печатаете карточки двухсторонним методом (карточки будут очень мягкими, из‑за чего ими будет трудно играть), либо печатаете их с одной стороны, берёте картон (можно и цветной), вырезаете его по размеру карточек и приклеиваете с двух сторон.</li>
+        <li>Вырежьте из того же картона специальный ободок.</li>
+        <li>Насладиться игрой.</li>
+      </ol>
+    </section>
+    <section id="htcyc" class="section">
+      <h2 id="htdy">Как сделать свои подобные карточки?</h2>
+      <p>Если моих карточек не хватает, то можно создать свои. Для этого понадобится:</p>
+      <ol class="text-htm-cont" type="1">
+        <li>Компьютер</li>
+        <li>Базовые знания в Figma (можно посмотреть на YouTube или RuTube)</li>
+        <li>Файл Figma из архива с карточками</li>
+        <li>Немного свободного времени</li>
+      </ol>
+      <p>Для того чтобы создать свои карточки, нужно открыть мой файл на сайте Figma и, зажав клавишу ALT, тянуть оригинал карточки, после чего просто наполняете его нужным текстом. Можно как просто добавить новые правила так и реализовать свои идеи на основе моих карточек.</p>
+      <div class="video-container">
+        <iframe width="720" height="405" src="https://rutube.ru/play/embed/5b1b36a73c5e739e5e616bc8a9ca51b0" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </div>
+    </section>
+    <section id="end-main" class="section">
+      <h2>Вы дошли до конца!</h2>
+      <p class="name-site">Нажмите на кнопку ниже, чтобы вернуться наверх.</p>
+      <button class="scroll-to-top-button scroll-to-top">
+        <span class="scroll-to-top-content">Вернуться наверх</span>
+      </button>
+    </section>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+    
+
