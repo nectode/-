@@ -1,5 +1,30 @@
 const mainBtn = document.querySelector('.scroll-up-btn-2');
 
+function handleMobileModal() {
+  const modal = document.getElementById('mobileModal');
+  const closeBtn = document.querySelector('.close-modal');
+  
+  // Проверяем, является ли устройство мобильным
+  if (window.innerWidth <= 768) {
+    // Проверяем, не было ли уже показано предупреждение
+    if (!localStorage.getItem('modalShown')) {
+      modal.style.display = 'block';
+      localStorage.setItem('modalShown', 'true');
+    }
+  }
+
+  // Закрытие модального окна при клике на крестик
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Закрытие модального окна при клике вне его области
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
   
